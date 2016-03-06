@@ -64,11 +64,13 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             
                     print(offset)
             
-            if offset > 100 || offset < -100 {
+            if offset > 50 || offset < -50 {
                 
                 dismissViewControllerAnimated(true, completion: nil)
                 
             } else {
+                
+                print("put view back")
                 
                 UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
                     self.photoScrollView.frame.origin.y = 0
