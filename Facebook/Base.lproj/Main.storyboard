@@ -202,10 +202,14 @@
                                 <rect key="frame" x="0.0" y="110" width="320" height="1438"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_feed-1" id="BFk-jQ-UCW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1488"/>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="VkQ-Dx-CrQ">
+                                        <rect key="frame" x="4" y="83" width="155" height="154"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <animations/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tIM-VE-C4U" appends="YES" id="jYt-Ki-OqT"/>
+                                        </connections>
                                     </imageView>
                                     <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding4" id="xPN-gI-iTF">
                                         <rect key="frame" x="161" y="187" width="156" height="103"/>
@@ -254,14 +258,10 @@
                                             <outletCollection property="gestureRecognizers" destination="Dsi-ce-9ss" appends="YES" id="QQC-it-uvS"/>
                                         </connections>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="VkQ-Dx-CrQ">
-                                        <rect key="frame" x="4" y="83" width="155" height="154"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_feed-1" id="BFk-jQ-UCW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1488"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <animations/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="tIM-VE-C4U" appends="YES" id="jYt-Ki-OqT"/>
-                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <animations/>

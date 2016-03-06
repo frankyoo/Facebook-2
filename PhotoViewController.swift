@@ -46,38 +46,36 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView!) {
         // This method is called as the user scrolls
         let offset = Float(photoScrollView.contentOffset.y)
-
-        let ty1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 0, r2Max: 0)
-
-        imageView.transform = CGAffineTransformMakeTranslation(0, CGFloat(ty1))
         
         
-//        UIView.animateWithDuration(1, delay: 0, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(1, delay: 0, options: [], animations: { () -> Void in
             self.photoScrollView.alpha = 0
             self.doneButton.alpha = 0
             self.actionsUIImageView.alpha = 0
             self.parentView.alpha = 0
-//            }, completion: nil)
-        
+            }, completion: nil)
+
         print(offset)
-//        
-//        func scrollViewDidEndDragging(scrollView: UIScrollView!,
-//            willDecelerate decelerate: Bool) {
-//                
-//                if offset > 300 && offset < -150 {
-//                    dismissViewControllerAnimated(true, completion: nil)
-//                } else {
-//                    
-//                    UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
-//                        self.photoScrollView.frame.origin.y = 0
-//                        self.photoScrollView.alpha = 1
-//                        self.doneButton.alpha = 1
-//                        self.actionsUIImageView.alpha = 1
-//                        }, completion: nil)
-//                    
-//                }
-//                
-//        }
+
+        func scrollViewDidEndDragging(scrollView: UIScrollView!,
+            willDecelerate decelerate: Bool) {
+                
+                if offset > 100 {
+                    
+                    dismissViewControllerAnimated(true, completion: nil)
+                
+                } else {
+                    
+                    UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
+                        self.photoScrollView.frame.origin.y = 0
+                        self.photoScrollView.alpha = 1
+                        self.doneButton.alpha = 1
+                        self.actionsUIImageView.alpha = 1
+                        }, completion: nil)
+                    
+                }
+
+        }
         
     }
     
