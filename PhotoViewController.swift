@@ -45,7 +45,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {
         // This method is called as the user scrolls
-        let offset = Float(photoScrollView.contentOffset.y)
+        
         
         
         UIView.animateWithDuration(1, delay: 0, options: [], animations: { () -> Void in
@@ -55,27 +55,29 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             self.parentView.alpha = 0
             }, completion: nil)
         
-        print(offset)
-        
-        func scrollViewDidEndDragging(scrollView: UIScrollView!,
-            willDecelerate decelerate: Bool) {
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView!,
+        willDecelerate decelerate: Bool) {
+            
+            let offset = Float(photoScrollView.contentOffset.y)
+            
+                    print(offset)
+            
+            if offset > 100 || offset < -100 {
                 
-                if offset > 100 || offset < -100 {
-                    
-                    dismissViewControllerAnimated(true, completion: nil)
-                    
-                } else {
-                    
-                    UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
-                        self.photoScrollView.frame.origin.y = 0
-                        self.photoScrollView.alpha = 1
-                        self.doneButton.alpha = 1
-                        self.actionsUIImageView.alpha = 1
-                        }, completion: nil)
-                    
-                }
-        }
-        
+                dismissViewControllerAnimated(true, completion: nil)
+                
+            } else {
+                
+                UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
+                    self.photoScrollView.frame.origin.y = 0
+                    self.photoScrollView.alpha = 1
+                    self.doneButton.alpha = 1
+                    self.actionsUIImageView.alpha = 1
+                    }, completion: nil)
+                
+            }
     }
     
     @IBAction func didPressDone(sender: AnyObject) {
