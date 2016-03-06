@@ -54,16 +54,16 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             self.actionsUIImageView.alpha = 0
             self.parentView.alpha = 0
             }, completion: nil)
-
+        
         print(offset)
-
+        
         func scrollViewDidEndDragging(scrollView: UIScrollView!,
             willDecelerate decelerate: Bool) {
                 
-                if offset > 100 {
+                if offset > 100 || offset < -100 {
                     
                     dismissViewControllerAnimated(true, completion: nil)
-                
+                    
                 } else {
                     
                     UIView.animateWithDuration(0.5, delay: 0, options: [], animations: { () -> Void in
@@ -74,12 +74,9 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
                         }, completion: nil)
                     
                 }
-
         }
         
     }
-    
-
     
     @IBAction func didPressDone(sender: AnyObject) {
         
