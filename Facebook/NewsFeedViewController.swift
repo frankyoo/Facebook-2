@@ -28,8 +28,8 @@ class NewsFeedViewController: UIViewController {
         // Configure the content size of the scroll view
         scrollView.contentSize = CGSizeMake(320, feedImageView.image!.size.height)
         
-        wedding1ImageView.frame.origin = CGPoint(x: 4, y: 194)
-        wedding1ImageView.frame.size = CGSize(width: 155, height: 50)
+        wedding1ImageView.frame.origin = CGPoint(x: 4, y: 83)
+        wedding1ImageView.frame.size = CGSize(width: 155, height: 154)
         
         wedding2ImageView.frame.origin = CGPoint(x: 4, y: 241)
         wedding2ImageView.frame.size = CGSize(width: 155, height: 154)

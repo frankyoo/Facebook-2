@@ -46,8 +46,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView!) {
         // This method is called as the user scrolls
         
-        
-        
         UIView.animateWithDuration(1, delay: 0, options: [], animations: { () -> Void in
             self.photoScrollView.alpha = 0
             self.doneButton.alpha = 0
@@ -62,7 +60,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             
             let offset = Float(photoScrollView.contentOffset.y)
             
-                    print(offset)
+            print(offset)
             
             if offset > 50 || offset < -50 {
                 
